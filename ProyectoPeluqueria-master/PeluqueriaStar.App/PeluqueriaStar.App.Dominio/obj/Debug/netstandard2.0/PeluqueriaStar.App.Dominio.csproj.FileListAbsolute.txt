@@ -8,3 +8,13 @@ C:\Users\USUARIO\Documents\MisionTic\MisionTic ciclo3\proyecto equipo\proyecto C
 C:\Users\USUARIO\Documents\MisionTic\MisionTic ciclo3\proyecto equipo\proyecto C#\peluqueria\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\Documents\MisionTic\MisionTic ciclo3\proyecto equipo\proyecto C#\peluqueria\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.dll
 C:\Users\USUARIO\Documents\MisionTic\MisionTic ciclo3\proyecto equipo\proyecto C#\peluqueria\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.pdb
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\bin\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.deps.json
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\bin\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.dll
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\bin\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.pdb
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.AssemblyInfo.cs
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.dll
+C:\Users\jenkl\Desktop\Ausber Proyectos Java\Nueva carpeta (2)\ProyectoPeluqueria-master\PeluqueriaStar.App\PeluqueriaStar.App.Dominio\obj\Debug\netstandard2.0\PeluqueriaStar.App.Dominio.pdb

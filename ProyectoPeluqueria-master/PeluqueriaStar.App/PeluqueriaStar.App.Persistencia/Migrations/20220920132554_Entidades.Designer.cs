@@ -10,7 +10,7 @@ using PeluqueriaStar.App.Persistencia;
 namespace PeluqueriaStar.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220915213522_Entidades")]
+    [Migration("20220920132554_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,11 +29,9 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("FechaCita")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HorarioCita")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("MembresiaId")
@@ -54,11 +52,9 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Fecha")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Horario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -92,11 +88,9 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Apellidos")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Celular")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Discriminator")
@@ -107,7 +101,6 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Nombre")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -125,15 +118,12 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Categoria")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Comentario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Descripcion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ValorServicio")
@@ -152,6 +142,13 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Administrador_CitaAsignadaId");
 
+                    b.Property<int?>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EstelistaId")
+                        .HasColumnType("int")
+                        .HasColumnName("Administrador_EstelistaId");
+
                     b.Property<int?>("HorarioEstelistaId")
                         .HasColumnType("int")
                         .HasColumnName("Administrador_HorarioEstelistaId");
@@ -164,6 +161,10 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasColumnName("Administrador_ServiciosOfrecerId");
 
                     b.HasIndex("CitaAsignadaId");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("EstelistaId");
 
                     b.HasIndex("HorarioEstelistaId");
 
@@ -182,7 +183,6 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Dirrecion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Edad")
@@ -212,7 +212,6 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TarjetaProfesional")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasIndex("HorarioEstelistaId");
@@ -237,6 +236,14 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("CitaAsignadaId");
 
+                    b.HasOne("PeluqueriaStar.App.Dominio.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId");
+
+                    b.HasOne("PeluqueriaStar.App.Dominio.Estelista", "Estelista")
+                        .WithMany()
+                        .HasForeignKey("EstelistaId");
+
                     b.HasOne("PeluqueriaStar.App.Dominio.HorarioEstelista", "HorarioEstelista")
                         .WithMany()
                         .HasForeignKey("HorarioEstelistaId");
@@ -250,6 +257,10 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         .HasForeignKey("ServiciosOfrecerId");
 
                     b.Navigation("CitaAsignada");
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Estelista");
 
                     b.Navigation("HorarioEstelista");
 

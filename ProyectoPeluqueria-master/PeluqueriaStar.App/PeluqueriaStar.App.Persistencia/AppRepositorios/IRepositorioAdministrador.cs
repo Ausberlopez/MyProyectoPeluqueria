@@ -6,14 +6,14 @@ using PeluqueriaStar.App.Dominio;
 namespace PeluqueriaStar.App.Persistencia
 {
 
-    public interface IRepositorioAdmistrador
+    public interface IRepositorioAdministrador
     {
       IEnumerable<Administrador>  GetAllAdministrador();
-      Admistrador AddAdmistrador(Admistrador admistrador);
-      Admistrador UpdateAdmistrador (Admistrador admistrador);
+      Administrador AddAdministrador(Administrador administrador);
+      Administrador UpdateAdministrador (Administrador administrador);
 
-      void DeleteAdmistrador (int idAdmistrador);
-      Admistrador  GetAdmistrador (int idAdmistrador);
+      void DeleteAdministrador (int idAdministrador);
+      Administrador  GetAdministrador (int idAdministrador);
       
       //Medico AsignarMedico (int idPaciente, int idMedico);
     }

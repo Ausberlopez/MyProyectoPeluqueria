@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vv2p01QDsLF5Nms2HJZ1HGE+uYCAZlAEzzM9MpV2hvxnvD6nSLL7ECpnAyq05ObHujM8kuD+8KmIKVEqNoRAgw==",
+  "dgSpecHash": "r4L5KBaULYmsdMFIogAgz+FWmi4O1qiz9lIUCA8qmMyVIrV+VyvutrweF6SoR1FS8UpfaHyjozuLdSe9G1sNHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\USUARIO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\jenkl\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jenkl\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

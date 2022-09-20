@@ -12,8 +12,8 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Fecha = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Fecha = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -40,10 +40,10 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Categoria = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ValorServicio = table.Column<int>(type: "int", nullable: false),
-                    Comentario = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Comentario = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,8 +56,8 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaCita = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    HorarioCita = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FechaCita = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HorarioCita = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MembresiaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -77,15 +77,17 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstadoSalud = table.Column<bool>(type: "bit", nullable: false),
-                    Celular = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Celular = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Administrador_CitaAsignadaId = table.Column<int>(type: "int", nullable: true),
                     MembresiaId = table.Column<int>(type: "int", nullable: true),
                     Administrador_ServiciosOfrecerId = table.Column<int>(type: "int", nullable: true),
                     Administrador_HorarioEstelistaId = table.Column<int>(type: "int", nullable: true),
+                    Administrador_EstelistaId = table.Column<int>(type: "int", nullable: true),
+                    ClienteId = table.Column<int>(type: "int", nullable: true),
                     Dirrecion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Edad = table.Column<int>(type: "int", nullable: true),
                     Genero = table.Column<int>(type: "int", nullable: true),
@@ -129,6 +131,18 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
+                        name: "FK_Persona_Persona_Administrador_EstelistaId",
+                        column: x => x.Administrador_EstelistaId,
+                        principalTable: "Persona",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Persona_Persona_ClienteId",
+                        column: x => x.ClienteId,
+                        principalTable: "Persona",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_Persona_Persona_EstelistaId",
                         column: x => x.EstelistaId,
                         principalTable: "Persona",
@@ -159,6 +173,11 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 column: "Administrador_CitaAsignadaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Persona_Administrador_EstelistaId",
+                table: "Persona",
+                column: "Administrador_EstelistaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Persona_Administrador_HorarioEstelistaId",
                 table: "Persona",
                 column: "Administrador_HorarioEstelistaId");
@@ -172,6 +191,11 @@ namespace PeluqueriaStar.App.Persistencia.Migrations
                 name: "IX_Persona_CitaAsignadaId",
                 table: "Persona",
                 column: "CitaAsignadaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Persona_ClienteId",
+                table: "Persona",
+                column: "ClienteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Persona_EstelistaId",

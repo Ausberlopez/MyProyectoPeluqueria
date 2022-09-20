@@ -7531,39 +7531,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jenkl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\PeluqueriaStar.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\PeluqueriaStar.App.Persistencia.csproj",
       "projectName": "PeluqueriaStar.App.Persistencia",
-      "projectPath": "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\PeluqueriaStar.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\PeluqueriaStar.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\jenkl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\jenkl\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\Documents\\MisionTic\\MisionTic ciclo3\\proyecto equipo\\proyecto C#\\peluqueria\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj"
+            "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\jenkl\\Desktop\\Ausber Proyectos Java\\Nueva carpeta (2)\\ProyectoPeluqueria-master\\PeluqueriaStar.App\\PeluqueriaStar.App.Dominio\\PeluqueriaStar.App.Dominio.csproj"
             }
           }
         }
@@ -7615,7 +7608,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

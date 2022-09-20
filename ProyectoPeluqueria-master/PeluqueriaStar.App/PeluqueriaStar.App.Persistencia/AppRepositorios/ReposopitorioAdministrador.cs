@@ -6,79 +6,78 @@ using PeluqueriaStar.App.Dominio;
 
 namespace PeluqueriaStar.App.Persistencia
 {
-    public class ReposopitorioAdministrador : IRepositorioAdministrador
+    public class RepositorioAdministrador : IRepositorioAdministrador
     {
         private readonly AppContext _appContext;
 
-        public ReposopitorioAdministrador(AppContext appContext){
+        public RepositorioAdministrador(AppContext appContext){
             _appContext = appContext;
         }
 
-        Admistrador IRepositorioAdmistrador.AddAdmistrador(Admistrador admistrador ){
-            var admistradorAdicionado = _appContext.Admistrador.Add(admistrador);
+        Administrador IRepositorioAdministrador.AddAdministrador(Administrador administrador ){
+            var administradorAdicionado = _appContext.Administrador.Add(administrador);
             _appContext.SaveChanges();
-            return admistradorAdicionado.Entity;
+            return administradorAdicionado.Entity;
         }
 
         //este metodo permitira eliminar 
-        void IRepositorioAdmistrador.DeleteAdmistrador(int idAdmistrador)
+        void IRepositorioAdministrador.DeleteAdministrador(int idAdministrador)
         {
-            var admistradorEncontrado = _appContext.Admistrador.FirstOrDefault(c => c.Id == idAdmistrador);
-            if(admistradorEncontrado == null) 
+            var administradorEncontrado = _appContext.Administrador.FirstOrDefault(c => c.Id == idAdministrador);
+            if(administradorEncontrado == null) 
             return;
-              _appContext.Admistrador.Remove(admistradorEncontrado);
+              _appContext.Administrador.Remove(administradorEncontrado);
               _appContext.SaveChanges();           
         }
 
-        IEnumerable<Admistrador> IRepositorioAdmistrador.GetAllAdmistradores()
+        IEnumerable<Administrador> IRepositorioAdministrador.GetAllAdministrador()
         {
-            return _appContext.Admistrador;//aqui
+            return _appContext.Administrador;//aqui
         }
 
-        Admistrador IRepositorioAdmistrador.GetAdmistrador(int idAdmistrador) 
+        Administrador IRepositorioAdministrador.GetAdministrador(int idAdministrador) 
         { 
-            Admistrador admistrador = new Admistrador();
-            admistrador = _appContext.Clientes.FirstOrDefault(c => c.Id == idAdmistrador);
-            return admistrador;
+            Administrador administrador = new Administrador();
+            administrador = _appContext.Administrador.FirstOrDefault(c => c.Id == idAdministrador);
+            return administrador;
         }
 
-        Admistrador IRepositorioAdmistrador.UpdateAdmistrador(Admistrador admistrador)
+        Administrador IRepositorioAdministrador.UpdateAdministrador(Administrador administrador)
         {
-            var clienteEncontrado =
-                _appContext.Admistrador.FirstOrDefault(c => c.Id == admistrador.Id);
-                if(admistradorEncontrado != null)
+            var administradorEncontrado =
+                _appContext.Administrador.FirstOrDefault(c => c.Id == administrador.Id);
+                if(administradorEncontrado != null)
                 {
-                admistradorEncontrado.Nombre = admistrador.Nombre;
-                admistradorEncontrado.Apellidos = admistrador.Apellidos;
-                admistradorEncontrado.EstadoSalud = admistrador.EstadoSalud;
-                admistradorEncontrado.Celular = admistrador.Celular;
-                admistradorEncontrado.Dirrecion = admistrador.Dirrecion;
-                admistradorEncontrado.Edad = admistrador.Edad;
-                admistradorEncontrado.Genero = admistrador.Genero;
-                admistradorEncontrado.Estelista = admistrador.Estelista;
-                admistradorEncontrado.CitaAsignada = admistrador.CitaAsignada;
+                administradorEncontrado.Nombre = administrador.Nombre;
+                administradorEncontrado.Apellidos = administrador.Apellidos;
+                administradorEncontrado.EstadoSalud = administrador.EstadoSalud;
+                administradorEncontrado.Celular = administrador.Celular;               
+                administradorEncontrado.Cliente = administrador.Cliente; 
+                administradorEncontrado.Estelista = administrador.Estelista;
+                administradorEncontrado.CitaAsignada = administrador.CitaAsignada;
                 
 
                 _appContext.SaveChanges();
                 }
-                return admistradorEncontrado;
+                return administradorEncontrado;
         }
-        /*
-        Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
-        {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente );
-            if(pacienteEncontrado != null)
-            {
-               var medicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == idMedico);
-               if(medicoEncontrado != null)
-               { 
-                 pacienteEncontrado.Medico = medicoEncontrado;
-                 _appContext.SaveChanges();
-               }
-               return medicoEncontrado;
-            }
-            return null;
-        }*/
+
+                /*
+Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
+{
+   var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente );
+   if(pacienteEncontrado != null)
+   {
+      var medicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == idMedico);
+      if(medicoEncontrado != null)
+      { 
+        pacienteEncontrado.Medico = medicoEncontrado;
+        _appContext.SaveChanges();
+      }
+      return medicoEncontrado;
+   }
+   return null;
+}*/
 
     }
 }

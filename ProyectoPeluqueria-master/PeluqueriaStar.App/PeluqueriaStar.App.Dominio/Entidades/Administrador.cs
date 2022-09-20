@@ -6,5 +6,7 @@ namespace PeluqueriaStar.App.Dominio
        public Membresia Membresia { get; set; } 
        public ServiciosOfrecer ServiciosOfrecer { get; set; }
        public HorarioEstelista HorarioEstelista { get; set; }
+       public Estelista Estelista { get; set; }
+       public Cliente Cliente { get; set; }
     }
 }
